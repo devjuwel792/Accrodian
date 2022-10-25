@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #bedfe8;
+    /* color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.accrodion{
+    max-width: 500px;
+}
+.accrodion .content_bx{
+    margin: 10px 20px;
+    
+}
+.accrodion .content_bx .label{
+    position: relative;
+    background-color: gray;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+.accrodion .content_bx .label::after{
+   content: "+";
+   position: absolute;
+   top: 50%;
+   right: 20px;
+   transform: translateY(-50%);
+   font-size: 1.5em;
+
+}
+.accrodion .content_bx.active .label::after{
+   content: "-";
+   
+
+}
+.accrodion .content_bx .content{
+    position: relative;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 1.5s ;
+    overflow-y: auto;
+    font-size: 17px ;
+    line-height: 24px; padding: 0 20px;
+    box-sizing: border-box;
+   
+}
+.accrodion .content_bx.active .content{
+    height: 100%;
+    overflow: visible;
+    padding: 20px ;
+    transition: .5s;
+   
+    
+}
+
